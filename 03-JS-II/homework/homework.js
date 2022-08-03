@@ -146,12 +146,12 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
 
-  if(numero % 3 === 0){
-    return "fizz";
+  if((numero % 5 === 0) && (numero % 3 === 0)){
+    return "fizzbuzz";
   }else if (numero % 5 === 0){
     return "buzz";
-  }else if(numero % 5 === 0 && numero % 3 === 0){
-    return "fizzbuzz";
+  }else if((numero % 3 === 0)){
+    return "fizz";
   }else{
     return numero;
   }//21, 22 & 23
@@ -171,8 +171,8 @@ function operadoresLogicos(num1, num2, num3) {
     return "Error";
   }else if(num1 > num2 && num1 > num3){
     return "Número 1 es mayor y positivo";
-  }else if (num3 > num2 && num1 < num3){
-    return num3++;
+  }else if (num3 > num2 && num3 > num1){
+    return num3=num3+1;
   }else{
     return false;
   }//24,25, 26 && 27
@@ -184,46 +184,68 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-  var r = 0;
-  var c = 0;
-  for (i = 0 ; i < numero ; i++){
-    r = numero % i
-    if (r === 0){
-      c++
+  if(numero ===0 || numero === 1){
+    return false;
+  }else{for (i = 2 ; i < numero ; i++){
+    let r = numero%i;
+    if(r === 0 && numero !== i){
+      return false;
+      break;
     }
   }
-  if (c === 2){
-    return true;
-  }else{
-    return false;
-  }//28
+  return true;
+}//31
 }
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
-
-}
+  if (valor === true){
+    return "Soy verdadero";
+  }else{
+    return "Soy falso";
+  }
+}//32 & 33
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
-  
-}
+  //Escribe tu código aquí
+  var resutadosDelSeis =[];
+  for (i = 0 ; i < 11 ; i++){
+   var r6 = 6 * i;
+   resutadosDelSeis.push(r6);
+  }
+  return resutadosDelSeis;
+}//34
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
   
-}
+  var numeroString = String(numero);
+  if (numeroString.length === 3){
+    return true;
+  }else{
+    return false;
+  }
+  
+}//35
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-}
+  var cont = 0;
+  do{
+    cont++;
+    numero = numero+5;
+  }
+  while (cont<8);
+  return numero;
+
+}//36
 
 
 // No modificar nada debajo de esta línea
