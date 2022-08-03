@@ -1,0 +1,5 @@
+Variables: es un espacio en memoria el cual aloja un dato para ser usado en una aplicación
+Strings: son cadenas de texto
+Funciones: son como maquinas a las cuales se les genera una tarea programada, a las cuales se les ingresa un dato para obtener un resultado.
+Declaraciones: es la condición para que se ejecute solo la sección de un código que cumple con una determinada condición.
+Valores Booleanos: son aquellos que solo puede tener dos valores como lo son 0 y 1 o verdadero o falso.
