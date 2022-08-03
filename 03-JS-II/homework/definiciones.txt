@@ -1,0 +1,2 @@
+for: procesos ciclo o bucle que permite realizar un proceso repetitivo hasta concretar una condición 
+&&, ||: son los operadores lógicos de java, && es y donde los valores deben ser ambos verdaderos para que la el resultado sea verdadero, || es o donde solo uno de los valores debe ser verdadero para ser verdadero.
